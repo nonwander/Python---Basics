@@ -1,7 +1,6 @@
 # Lesson 1 - Python Basics
-```
-My goal in completing these tasks was not to demonstrate my knowledge of the basics of Python, but to use tasks to improve the practice of writing structured applications that satisfy some minimum requirements for code readability and lack of redundancy relative to the source task.
-```
+
+> **Note:** My goal in completing these tasks was not to demonstrate my knowledge of the basics of Python, but to use tasks to improve the practice of writing structured applications that satisfy some minimum requirements for code readability and lack of redundancy relative to the source task.
 
 1. Work with variables, create several, display them on the screen. Ask the user for some numbers and strings and save them to variables, then display them on the screen.
 
