@@ -1,0 +1,11 @@
+{
+    "1": {
+        "name": "computer", "price": 20000, "quantity": 5, "units": "pcs."
+    },
+    "2": {
+        "name": "printer", "price": 6000, "quantity": 2, "units": "pcs."
+    },
+    "3": {
+        "name": "scanner", "price": 2000, "quantity": 7, "units": "pcs."
+    }
+}
