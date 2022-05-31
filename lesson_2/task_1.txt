@@ -1,0 +1,12 @@
+None
+True
+False
+256
+0b11111111
+0xFF
+0o11
+0.256
+2.5+6j
+string
+b'\x00\x10\x02\x03'
+b'2dLH'

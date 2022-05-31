@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-""">>>\nThis module finds the largest digit in the number entered by the user.
-\nThe WHILE loop and arithmetic operations are used for the solution.
+""">>>\nThis module returns the list of raiting values.
+Raiting list is a decreasing list of natural numbers.
+The User needs to enter the value of the raiting in range [1 .. 10].
 
 Functions:
 
@@ -10,19 +11,17 @@ Functions:
 
     _validator(*args, **kwargs) -> Any
 
-    get_input_number() -> int
+    get_input_value() -> int
 
-    get_maximal_digit(input_number: int) -> int
+    get_raiting_list(input_value: int) -> list[int]
 
-    show_digit(input_value: int) -> None
+    show_raiting_list(input_value: list[int]) -> None
 
 Exceptions:
     ValueError
 
 *author: Nemykin Eugene (Student GeekBrains)\n<<<
 """
-
-
 from typing import Any, Callable
 
 
@@ -42,34 +41,31 @@ def validate_input(function) -> Callable[[], Any]:
 
 
 @validate_input
-def get_input_number() -> int:
-    input_value: str = input('Enter number using a natural integer: ')
-    number: int = int(input_value)
-    if number <= 0:
+def get_input_value() -> int:
+    input_value: str = input('Enter raiting vlue using a natural integer: ')
+    value = int(input_value)
+    if value not in range(1, 10 + 1):
         raise ValueError(
             'entered number is out of range, must be a positive integer!'
         )
-    return number
+    return value
 
 
-def get_maximal_digit(input_number: int) -> int:
-    maximal_digit = 0
-    while input_number > 0:
-        digit = input_number % 10
-        input_number //= 10
-        if digit > maximal_digit:
-            maximal_digit = digit
-    return maximal_digit
+def get_raiting_list(input_value: int) -> list[int]:
+    initial_list: list[int] = [7, 5, 3, 3, 2]
+    initial_list.append(input_value)
+    initial_list.sort(reverse=True)
+    return initial_list
 
 
-def show_digit(input_value: int) -> None:
+def show_raiting_list(input_value: list[int]) -> None:
     print(input_value)
 
 
 def main() -> None:
-    input_number: int = get_input_number()
-    maximal_digit: int = get_maximal_digit(input_number)
-    show_digit(maximal_digit)
+    input_value: int = get_input_value()
+    raiting_list: list[int] = get_raiting_list(input_value)
+    show_raiting_list(raiting_list)
 
 
 if __name__ == '__main__':
